@@ -3452,7 +3452,7 @@ plist_t restore_get_build_identity(struct idevicerestore_client_t* client, uint8
 	plist_t unique_id_node = plist_dict_get_item(client->build_manifest, "UniqueBuildID");
 	if (unique_id_node) {
 		printf("UniqueBuildID: ");
-		plist_write_to_stream(unique_id_node, stdout, PLIST_FORMAT_PRINT, PLIST_OPT_NONE);
+		plist_write_to_stream(unique_id_node, stdout, PLIST_FORMAT_PRINT, 0);
 	}
 
 	return build_identity;
